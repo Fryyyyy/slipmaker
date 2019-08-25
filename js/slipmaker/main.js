@@ -67,8 +67,8 @@ function generateSlipPDF(outputtype) {
         // Put the DOM into the live preview iframe
         $('iframe').attr('src', domdl);
     } else {
-        filename = ($.grep([$("#firstname").val().capitalize(), $("#lastname").val().capitalize(), $("#event").val().capitalize(), "decklist"], Boolean).join(" ")) + '.pdf';
-        savePDF(dl, filename);
+        filename = 'slips.pdf';
+        dl.save(filename);
     }
 }
 
