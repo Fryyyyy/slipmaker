@@ -26,7 +26,11 @@
     <script type="text/javascript" src="js/FileSaver/FileSaver-1.3.3.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/auseternal.css">
     <link rel='stylesheet' id='hemingway_googleFonts-css'  href='https://fonts.googleapis.com/css?family=Lato%3A400%2C700%2C400italic%2C700italic%7CRaleway%3A700%2C400&#038;ver=4.2.2' type='text/css' media='all' />
-</script>
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion();
+        } );
+    </script>
 </head>
 
 <body>
@@ -44,37 +48,138 @@
                                 <div class="form"><input type="text" id="eventname" placeholder="Event Name"></div>
                             </label>
                             <label for="eventround">
-                                <div class="form"><input type="text" id="eventround" placeholder="Round #"></div>
-                            </label>
-                            <label for="eventtable">
-                                <input type="text" id="eventtable" placeholder="Table #">
-                            </label><br>
-                            <div class="personal"><h2>Player 1</h2></div>
-                            <label for="p1name">
-                                <div class="form">
-                                <input type="text" id="p1name" placeholder="Name"></div>
-                            </label>
-                            <label for="p1dci">
-                                <div class="form">
-                                <input type="text" id="p1dci" placeholder="DCI #"></div>
-                            </label>
-                            <label for="p1points">
-                                <div class="form">
-                                <input type="text" id="p1points" placeholder="Points"></div>
-                            </label><br>
-                            <div class="personal"><h2>Player 2</h2></div>
-                            <label for="p2name">
-                                <div class="form">
-                                <input type="text" id="p2name" placeholder="Name"></div>
-                            </label>
-                            <label for="p2dci">
-                                <div class="form">
-                                <input type="text" id="p2dci" placeholder="DCI #"></div>
-                            </label>
-                            <label for="p2points">
-                                <div class="form">
-                                <input type="text" id="p2points" placeholder="Points"></div>
-                            </label><br>
+                                    <div class="form"><input type="text" id="eventround" placeholder="Round #"></div>
+                                </label>
+                            <div id="accordion">
+                                <h3>Slip 1</h3>
+                                <div>
+                                    <label for="eventtable">
+                                        <input type="text" id="s1eventtable" placeholder="Table #">
+                                    </label><br>
+                                    <div class="personal"><h2>Player 1</h2></div>
+                                    <label for="p1name">
+                                        <div class="form">
+                                        <input type="text" id="s1p1name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p1dci">
+                                        <div class="form">
+                                        <input type="text" id="s1p1dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p1points">
+                                        <div class="form">
+                                        <input type="text" id="s1p1points" placeholder="Points"></div>
+                                    </label><br>
+                                    <div class="personal"><h2>Player 2</h2></div>
+                                    <label for="p2name">
+                                        <div class="form">
+                                        <input type="text" id="s1p2name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p2dci">
+                                        <div class="form">
+                                        <input type="text" id="s1p2dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p2points">
+                                        <div class="form">
+                                        <input type="text" id="s1p2points" placeholder="Points"></div>
+                                    </label><br>
+                                </div>
+                                <h3>Slip 2</h3>
+                                <div>
+                                    <label for="eventtable">
+                                        <input type="text" id="s2eventtable" placeholder="Table #">
+                                    </label><br>
+                                    <div class="personal"><h2>Player 1</h2></div>
+                                    <label for="p1name">
+                                        <div class="form">
+                                        <input type="text" id="s2p1name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p1dci">
+                                        <div class="form">
+                                        <input type="text" id="s2p1dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p1points">
+                                        <div class="form">
+                                        <input type="text" id="s2p1points" placeholder="Points"></div>
+                                    </label><br>
+                                    <div class="personal"><h2>Player 2</h2></div>
+                                    <label for="p2name">
+                                        <div class="form">
+                                        <input type="text" id="s2p2name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p2dci">
+                                        <div class="form">
+                                        <input type="text" id="s2p2dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p2points">
+                                        <div class="form">
+                                        <input type="text" id="s2p2points" placeholder="Points"></div>
+                                    </label><br>
+                                </div>
+                                <h3>Slip 3</h3>
+                                <div>
+                                    <label for="eventtable">
+                                        <input type="text" id="s3eventtable" placeholder="Table #">
+                                    </label><br>
+                                    <div class="personal"><h2>Player 1</h2></div>
+                                    <label for="p1name">
+                                        <div class="form">
+                                        <input type="text" id="s3p1name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p1dci">
+                                        <div class="form">
+                                        <input type="text" id="s3p1dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p1points">
+                                        <div class="form">
+                                        <input type="text" id="s3p1points" placeholder="Points"></div>
+                                    </label><br>
+                                    <div class="personal"><h2>Player 2</h2></div>
+                                    <label for="p2name">
+                                        <div class="form">
+                                        <input type="text" id="s3p2name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p2dci">
+                                        <div class="form">
+                                        <input type="text" id="s3p2dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p2points">
+                                        <div class="form">
+                                        <input type="text" id="s3p2points" placeholder="Points"></div>
+                                    </label><br>
+                                </div>
+                                <h3>Slip 4</h3>
+                                <div>
+                                    <label for="eventtable">
+                                        <input type="text" id="s4eventtable" placeholder="Table #">
+                                    </label><br>
+                                    <div class="personal"><h2>Player 1</h2></div>
+                                    <label for="p1name">
+                                        <div class="form">
+                                        <input type="text" id="s4p1name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p1dci">
+                                        <div class="form">
+                                        <input type="text" id="s4p1dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p1points">
+                                        <div class="form">
+                                        <input type="text" id="s4p1points" placeholder="Points"></div>
+                                    </label><br>
+                                    <div class="personal"><h2>Player 2</h2></div>
+                                    <label for="p2name">
+                                        <div class="form">
+                                        <input type="text" id="s4p2name" placeholder="Name"></div>
+                                    </label>
+                                    <label for="p2dci">
+                                        <div class="form">
+                                        <input type="text" id="s4p2dci" placeholder="DCI #"></div>
+                                    </label>
+                                    <label for="p2points">
+                                        <div class="form">
+                                        <input type="text" id="s4p2points" placeholder="Points"></div>
+                                    </label><br>
+                                </div>
+                            </div>
                         </form>
                     </div> <!-- left -->
                 </div> <!-- wrapleft -->
@@ -86,7 +191,7 @@
                         <iframe id="decklist" name="decklist" height="580" width="440"></iframe>
                     </div>
                     <form>
-                        <input type="button" id="download" value="Download Decklist (PDF)" onclick="generateDecklistPDF('dataurlnewwindow');"/>
+                        <input type="button" id="download" value="Download Slips (PDF)" onclick="generateDecklistPDF('dataurlnewwindow');"/>
                     </form>
                 </div> <!-- right -->
 

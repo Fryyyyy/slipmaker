@@ -180,43 +180,54 @@ function addDataToSlip(dl) {
     eventname = toTitleCase($("#eventname").val());
     dl.text(eventname, 180, y);
 
-    roundno = $("#eventround").val();
-    dl.text(roundno, 75, y);
+    for (var i = 1; i < 5; i++) {
+        roundno = $("#eventround").val();
+        dl.text(roundno, 75, y);
+    
+        y += 20;
 
-    y += 20;
+        tablevar = "#s"+i+"eventtable";
+        tableno = $(tablevar).val();
+        dl.text(tableno, 75, y);
 
-    tableno = $("#eventtable").val();
-    dl.text(tableno, 75, y);
+        y += 20;
 
-    y += 20;
+        p1namevar = "#s"+i+"p1name";
+        p1name = toTitleCase($(p1namevar).val());
+        dl.text(p1name, 95, y);
 
-    p1name = toTitleCase($("#p1name").val());
-    dl.text(p1name, 95, y);
+        y += 15;
 
-    y += 15;
+        p1dcivar = "#s"+i+"p1dci";
+        p1dci = $(p1dcivar).val();
+        dl.text(p1dci, 105, y);
 
-    p1dci = $("#p1dci").val();
-    dl.text(p1dci, 105, y);
+        y += 15;
 
-    y += 15;
+        p1pointsvar = "#s"+i+"p1points";
+        p1points = $(p1pointsvar).val();
+        dl.text(p1points, 80, y);
 
-    p1points = $("#p1points").val();
-    dl.text(p1points, 80, y);
+        y += 25;
 
-    y += 25;
+        p2namevar = "#s"+i+"p2name";
+        p2name = toTitleCase($(p2namevar).val());
+        dl.text(p2name, 95, y);
 
-    p2name = toTitleCase($("#p2name").val());
-    dl.text(p2name, 95, y);
+        y += 15;
 
-    y += 15;
+        p2dcivar = "#s"+i+"p2dci";
+        p2dci = $(p2dcivar).val();
+        dl.text(p2dci, 105, y);
 
-    p2dci = $("#p2dci").val();
-    dl.text(p2dci, 105, y);
+        y += 15;
 
-    y += 15;
+        p2pointsvar = "#s"+i+"p2points";
+        p2points = $(p2pointsvar).val();
+        dl.text(p2points, 80, y);
 
-    p2points = $("#p2points").val();
-    dl.text(p2points, 80, y);
+        y += 60;
+    }
 }
 
 function toTitleCase(str) {
