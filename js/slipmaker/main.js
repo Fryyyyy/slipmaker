@@ -177,6 +177,9 @@ function addTemplateToSlip(dl) {
 function addDataToSlip(dl) {
     var y = 40;
 
+    eventname = toTitleCase($("#eventname").val());
+    dl.text(eventname, 180, y);
+
     roundno = $("#eventround").val();
     dl.text(roundno, 75, y);
 
