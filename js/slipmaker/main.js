@@ -74,7 +74,6 @@ function generateSlipPDF(outputtype) {
 }
 
 // Parses the WER line and adds it to the next available slip
-// 481	Meibusch, William	Awaiting Result	Raymond, Christopher	Awaiting Result
 function addWERToAccordion() {
     var werText = $("#pastefromwer").val()
     if (werText == "") {
