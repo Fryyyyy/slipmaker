@@ -58,6 +58,7 @@ function generateSlipPDF(outputtype) {
     }
 
     dl = generateSlipLayout();
+    addWERToAccordion();
     addDataToSlip(dl);
 
    // Output the dl as a blob to add to the DOM
@@ -70,6 +71,38 @@ function generateSlipPDF(outputtype) {
         filename = 'slips.pdf';
         dl.save(filename);
     }
+}
+
+// Parses the WER line and adds it to the next available slip
+// 481	Meibusch, William	Awaiting Result	Raymond, Christopher	Awaiting Result
+function addWERToAccordion() {
+    var werText = $("#pastefromwer").val()
+    if (werText == "") {
+        return;
+    }
+    for (var i = 1; i < 5; i++) {
+        p1namevar = "#s"+i+"p1name";
+        var p1name = $(p1namevar).val();
+        if (p1name == "") {
+            // Found an empty slip spot
+            splitText = werText.split("	");
+            if (splitText.length != 5) {
+                return;
+            }
+
+            tablevar = "#s"+i+"eventtable";
+            $(tablevar).val(splitText[0]);
+            p1namevar = "#s"+i+"p1name";
+            $(p1namevar).val(splitText[1]);
+            p2namevar = "#s"+i+"p2name";
+            $(p2namevar).val(splitText[3]);
+
+            $("#pastefromwer").val("");
+            return;
+        }
+    }
+    // No empty slip spot found
+    alert("Slips are full - no space for the WER match");
 }
 
 // Generates the part of the PDF that never changes (lines, boxes, etc.)
